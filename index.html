@@ -24,20 +24,19 @@
       border-radius: 20px;
       color: white;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      max-width: 100%;
-      width: 90%;
+      width: 100%;
+      max-width: 550px;
       box-sizing: border-box;
     }
 
     h1 {
-      font-size: 5vw; /* Scales with screen size */
+      font-size: 6vw; /* Scales with screen size */
       margin-bottom: 20px;
       color: #1ABC9C;
-      text-align: center;
     }
 
     .message {
-      font-size: 4vw; /* Scales with screen size */
+      font-size: 4.5vw; /* Scales with screen size */
       line-height: 1.6;
       margin: 20px 0;
       padding: 20px;
@@ -93,6 +92,24 @@
         font-size: 4vw;
       }
     }
+
+    @media (min-width: 600px) and (max-width: 1024px) {
+      h1 {
+        font-size: 5vw;
+      }
+
+      .message {
+        font-size: 4vw;
+      }
+
+      .footer {
+        font-size: 4vw;
+      }
+
+      .ps {
+        font-size: 3.5vw;
+      }
+    }
   </style>
   <script>
     let countdown = 15; // Countdown starting at 15 seconds
@@ -134,7 +151,7 @@
     <div class="message">
       <p>Your request has been received. We're now checking the status of the car.</p>
       <p>If successful, the car lights will flash and you'll find the charging cable has been unlocked for you (if the car is charged enough). Enjoy!</p>
-      <p>If the car is unhappy because you scanned too early (or if my code broke), it will not release the cable and will get rather shitty at you. Please don't message me if you have prematurely scanned before my estimated end charge time.</p>
+      <p>If the car is unhappy because you scanned too early (or if my code broke), it will not release the cable and will get rather shitty at you.</p>
       <p></p>
       <p class="ps">Note, this only works if the Tesla is plugged into a charger at Pier St carpark. So don't get any silly ideas about triggering this when I'm elsewhere.</p>
     </div>
