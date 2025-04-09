@@ -4,10 +4,16 @@
   <title>Unlocking...</title>
   <script>
     fetch("https://hooks.nabu.casa/gAAAAABn9kRdgWqj3Q-Pyxe8zsi2nWF7NmCtAJkhmwRddBZIIDgii5u5h2-BGW_gd73vyOQBS7OWA6zm7o0EUb7oLlBMFQ9wwVcnHI6jeS2KneCVhuSslfTnJBKQZLgocAtu6Qrf5p_CgOoon4hxL7-4n_iO1z-PhHDuiGWYprfUC19qdKEBFTI=")
-      .then(() => {
-        setTimeout(() => {
+      .then(response => {
+        if (response.ok) {
+          // If the webhook request is successful, perform the redirect
           window.location.href = "https://youtu.be/pQupqIYbrU4";
-        }, 2000); // wait for 2 seconds before redirecting
+        } else {
+          console.error("Error with the webhook request.");
+        }
+      })
+      .catch(error => {
+        console.error("Fetch failed:", error);
       });
   </script>
 </head>
