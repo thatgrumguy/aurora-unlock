@@ -19,39 +19,39 @@
 
     .container {
       text-align: center;
-      padding: 30px 20px;
+      padding: 15px 10px; /* Reduced padding */
       background-color: #34495E;
       border-radius: 20px;
       color: white;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       width: 100%;
-      max-width: 550px;
+      max-width: 500px; /* Smaller max width */
       box-sizing: border-box;
     }
 
     h1 {
-      font-size: 6vw; /* Scales with screen size */
-      margin-bottom: 20px;
+      font-size: 7vw; /* Scales with screen size */
+      margin-bottom: 10px;
       color: #1ABC9C;
     }
 
     .message {
-      font-size: 4.5vw; /* Scales with screen size */
-      line-height: 1.6;
-      margin: 20px 0;
-      padding: 20px;
+      font-size: 5vw; /* Scales with screen size */
+      line-height: 1.5;
+      margin: 15px 0;
+      padding: 10px;
       background-color: #2C3E50;
       border-radius: 10px;
       font-weight: normal;
     }
 
     .message p {
-      margin: 15px 0;
+      margin: 10px 0;
     }
 
     .footer {
-      font-size: 4vw; /* Scales with screen size */
-      margin-top: 30px;
+      font-size: 4.5vw; /* Scales with screen size */
+      margin-top: 20px;
       color: #BDC3C7;
     }
 
@@ -68,20 +68,20 @@
 
     /* Style for PS text */
     .ps {
-      font-size: 3.5vw; /* Scales with screen size */
+      font-size: 4vw; /* Scales with screen size */
       font-style: italic;
       color: #BDC3C7;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     /* Responsive styling */
     @media (max-width: 600px) {
       h1 {
-        font-size: 7vw;
+        font-size: 8vw;
       }
 
       .message {
-        font-size: 5vw;
+        font-size: 6vw;
       }
 
       .footer {
@@ -89,25 +89,25 @@
       }
 
       .ps {
-        font-size: 4vw;
+        font-size: 5vw;
       }
     }
 
     @media (min-width: 600px) and (max-width: 1024px) {
       h1 {
-        font-size: 5vw;
+        font-size: 6vw;
       }
 
       .message {
-        font-size: 4vw;
+        font-size: 5vw;
       }
 
       .footer {
-        font-size: 4vw;
+        font-size: 4.5vw;
       }
 
       .ps {
-        font-size: 3.5vw;
+        font-size: 4vw;
       }
     }
   </style>
@@ -152,7 +152,6 @@
       <p>Your request has been received. We're now checking the status of the car.</p>
       <p>If successful, the car lights will flash and you'll find the charging cable has been unlocked for you (if the car is charged enough). Enjoy!</p>
       <p>If the car is unhappy because you scanned too early (or if my code broke), it will not release the cable and will get rather shitty at you.</p>
-      <p></p>
       <p class="ps">Note, this only works if the Tesla is plugged into a charger at Pier St carpark. So don't get any silly ideas about triggering this when I'm elsewhere.</p>
     </div>
     <div class="footer">
