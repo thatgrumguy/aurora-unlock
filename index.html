@@ -50,8 +50,32 @@
       margin-top: 20px;
       color: #BDC3C7;
     }
+
+    /* Blinking effect */
+    .blinking {
+      animation: blink 1s step-start 0s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        visibility: hidden;
+      }
+    }
   </style>
   <script>
+    let countdown = 10; // Countdown starting at 10 seconds
+    const countdownElement = document.getElementById("countdown");
+    
+    // Function to update the countdown
+    function updateCountdown() {
+      if (countdown <= 0) {
+        clearInterval(countdownTimer); // Stop the countdown once it reaches 0
+        return;
+      }
+      countdownElement.textContent = `Checking battery status in ${countdown} seconds...`;
+      countdown--;
+    }
+
     // Trigger the webhook
     fetch("https://hooks.nabu.casa/gAAAAABn9kRdgWqj3Q-Pyxe8zsi2nWF7NmCtAJkhmwRddBZIIDgii5u5h2-BGW_gd73vyOQBS7OWA6zm7o0EUb7oLlBMFQ9wwVcnHI6jeS2KneCVhuSslfTnJBKQZLgocAtu6Qrf5p_CgOoon4hxL7-4n_iO1z-PhHDuiGWYprfUC19qdKEBFTI=")
       .then(response => {
@@ -67,6 +91,9 @@
     setTimeout(() => {
       window.location.href = "https://youtu.be/pQupqIYbrU4?autoplay=1";
     }, 10000); // 10000ms = 10 seconds
+
+    // Start the countdown timer
+    const countdownTimer = setInterval(updateCountdown, 1000); // Update every second
   </script>
 </head>
 <body>
@@ -77,7 +104,7 @@
       <p>Otherwise, if you're being impatient and scanned too early (or if my code broke), the car will get shitty at you.</p>
     </div>
     <div class="footer">
-      <p>Checking battery status now...</p>
+      <p id="countdown" class="blinking">Checking battery status in 10 seconds...</p>
     </div>
   </div>
 </body>
