@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Unlocking Cable Request Processing...</title>
   <style>
@@ -14,28 +14,31 @@
       height: 100vh;
       background-color: #ECF0F1;
       color: #2C3E50;
+      overflow: hidden; /* Prevents overflow on small screens */
     }
 
     .container {
       text-align: center;
-      padding: 40px 30px;
+      padding: 30px 20px;
       background-color: #34495E;
       border-radius: 20px;
       color: white;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      max-width: 90%;
-      width: 550px;
+      max-width: 100%;
+      width: 90%;
+      box-sizing: border-box;
     }
 
     h1 {
-      font-size: 3.5rem;
+      font-size: 5vw; /* Scales with screen size */
       margin-bottom: 20px;
       color: #1ABC9C;
+      text-align: center;
     }
 
     .message {
-      font-size: 1.6rem;
-      line-height: 1.8;
+      font-size: 4vw; /* Scales with screen size */
+      line-height: 1.6;
       margin: 20px 0;
       padding: 20px;
       background-color: #2C3E50;
@@ -48,7 +51,7 @@
     }
 
     .footer {
-      font-size: 1.5rem;
+      font-size: 4vw; /* Scales with screen size */
       margin-top: 30px;
       color: #BDC3C7;
     }
@@ -64,32 +67,31 @@
       }
     }
 
-    /* Responsive styling */
-    @media (max-width: 600px) {
-      .container {
-        padding: 30px;
-        width: 90%;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .message {
-        font-size: 1.4rem;
-      }
-
-      .footer {
-        font-size: 1.4rem;
-      }
-    }
-
     /* Style for PS text */
     .ps {
-      font-size: 1.2rem;
+      font-size: 3.5vw; /* Scales with screen size */
       font-style: italic;
       color: #BDC3C7;
       margin-top: 20px;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 7vw;
+      }
+
+      .message {
+        font-size: 5vw;
+      }
+
+      .footer {
+        font-size: 5vw;
+      }
+
+      .ps {
+        font-size: 4vw;
+      }
     }
   </style>
   <script>
@@ -131,10 +133,10 @@
     <h1>Unlocking Charging Cable Request</h1>
     <div class="message">
       <p>Your request has been received. We're now checking the status of the car.</p>
-      <p>The charging cable will be unlocked and ready for you to use (if the car is charged enough). Enjoy!</p>
-      <p>If the car is unhappy because you scanned too early (or if my code broke), it will not release the cable and will get a bit shitty at you. Please don't message me if you have prematurely scanned.</p>
+      <p>If successful, the car lights will flash and you'll find the charging cable has been unlocked for you (if the car is charged enough). Enjoy!</p>
+      <p>If the car is unhappy because you scanned too early (or if my code broke), it will not release the cable and will get rather shitty at you. Please don't message me if you have prematurely scanned before my estimated end charge time.</p>
       <p></p>
-      <p class="ps">Note, this only works if the cable is plugged into a charger at Pier St carpark. So don't get any silly ideas about triggering this when I'm elsewhere.</p>
+      <p class="ps">Note, this only works if the Tesla is plugged into a charger at Pier St carpark. So don't get any silly ideas about triggering this when I'm elsewhere.</p>
     </div>
     <div class="footer">
       <p id="countdown" class="blinking">Checking battery status in 15 seconds...</p>
