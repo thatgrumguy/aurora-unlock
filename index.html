@@ -3,98 +3,21 @@
 <head>
   <title>Unlocking Cable Request Processing...</title>
   <style>
-    /* Modern font and layout */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #ECF0F1;
-      color: #2C3E50;
-      text-align: center; /* Center text */
-      overflow: hidden; /* Prevents overflow on small screens */
+      text-align: center;
     }
 
     h1 {
-      font-size: 8vw; /* Scales with screen size */
-      margin-bottom: 10px;
-      color: #1ABC9C;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
 
-    .message {
-      font-size: 6vw; /* Scales with screen size */
-      line-height: 1.5;
-      margin: 15px 0;
-      padding: 10px;
-      background-color: #34495E;
-      border-radius: 10px;
-      color: white;
-      font-weight: normal;
-    }
-
-    .footer {
-      font-size: 5vw; /* Scales with screen size */
-      margin-top: 20px;
-      color: #BDC3C7;
-    }
-
-    /* Blinking effect */
-    .blinking {
-      animation: blink 1s step-start 0s infinite;
-    }
-
-    @keyframes blink {
-      50% {
-        visibility: hidden;
-      }
-    }
-
-    /* Style for PS text */
     .ps {
-      font-size: 4vw; /* Scales with screen size */
       font-style: italic;
-      color: #BDC3C7;
-      margin-top: 10px;
-    }
-
-    /* Responsive styling */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 10vw;
-      }
-
-      .message {
-        font-size: 7vw;
-      }
-
-      .footer {
-        font-size: 6vw;
-      }
-
-      .ps {
-        font-size: 5vw;
-      }
-    }
-
-    @media (min-width: 600px) and (max-width: 1024px) {
-      h1 {
-        font-size: 8vw;
-      }
-
-      .message {
-        font-size: 6vw;
-      }
-
-      .footer {
-        font-size: 5vw;
-      }
-
-      .ps {
-        font-size: 4vw;
-      }
+      margin-top: 20px;
     }
   </style>
   <script>
@@ -132,17 +55,11 @@
   </script>
 </head>
 <body>
-  <div>
-    <h1>Unlocking Charging Cable Request</h1>
-    <div class="message">
-      <p>Your request has been received. We're now checking the status of the car.</p>
-      <p>If successful, the car lights will flash and you'll find the charging cable has been unlocked for you (if the car is charged enough). Enjoy!</p>
-      <p>If the car is unhappy because you scanned too early (or if my code broke), it will not release the cable and will get rather shitty at you.</p>
-      <p class="ps">Note, this only works if the Tesla is plugged into a charger at Pier St carpark. So don't get any silly ideas about triggering this when I'm elsewhere.</p>
-    </div>
-    <div class="footer">
-      <p id="countdown" class="blinking">Checking battery status in 15 seconds...</p>
-    </div>
-  </div>
+  <h1>Unlocking Charging Cable Request</h1>
+  <p>Your request has been received. We're now checking the status of the car.</p>
+  <p>If successful, the car lights will flash and you'll find the charging cable has been unlocked for you (if the car is charged enough). Enjoy!</p>
+  <p>If the car is unhappy because you scanned too early (or if my code broke), it will not release the cable and will get rather shitty at you.</p>
+  <p class="ps">Note, this only works if the Tesla is plugged into a charger at Pier St carpark. So don't get any silly ideas about triggering this when I'm elsewhere.</p>
+  <p id="countdown">Checking battery status in 15 seconds...</p>
 </body>
 </html>
