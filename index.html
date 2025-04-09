@@ -83,6 +83,14 @@
         font-size: 1.4rem;
       }
     }
+
+    /* Style for PS text */
+    .ps {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #BDC3C7;
+      margin-top: 20px;
+    }
   </style>
   <script>
     let countdown = 15; // Countdown starting at 15 seconds
@@ -126,7 +134,7 @@
       <p>The charging cable will be unlocked and ready for you to use (if the car is charged enough). Enjoy!</p>
       <p>If the car is unhappy because you scanned too early (or if my code broke), it will not release the cable and will get a bit shitty at you. Please don't message me if you have prematurely scanned.</p>
       <p></p>
-      <p>Note, this only works if the cable is plugged into a charger at Pier St carpark. So don't get any silly ideas about triggering this when I'm elsewhere.</p>
+      <p class="ps">Note, this only works if the cable is plugged into a charger at Pier St carpark. So don't get any silly ideas about triggering this when I'm elsewhere.</p>
     </div>
     <div class="footer">
       <p id="countdown" class="blinking">Checking battery status in 15 seconds...</p>
