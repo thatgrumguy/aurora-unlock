@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Unlocking...</title>
-  <meta http-equiv="refresh" content="2;url=https://youtu.be/pQupqIYbrU4">
   <script>
     // Trigger the webhook
     fetch("https://hooks.nabu.casa/gAAAAABn9kRdgWqj3Q-Pyxe8zsi2nWF7NmCtAJkhmwRddBZIIDgii5u5h2-BGW_gd73vyOQBS7OWA6zm7o0EUb7oLlBMFQ9wwVcnHI6jeS2KneCVhuSslfTnJBKQZLgocAtu6Qrf5p_CgOoon4hxL7-4n_iO1z-PhHDuiGWYprfUC19qdKEBFTI=")
@@ -14,6 +13,11 @@
       .catch(error => {
         console.error("Fetch failed:", error);
       });
+
+    // Redirect after 3 seconds (2 seconds for webhook + 1 second delay for autoplay)
+    setTimeout(() => {
+      window.location.href = "https://youtu.be/pQupqIYbrU4?autoplay=1";
+    }, 3000); // 3000ms = 3 seconds
   </script>
 </head>
 <body>
