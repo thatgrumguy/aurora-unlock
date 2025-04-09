@@ -3,41 +3,43 @@
 <head>
   <title>Unlocking Cable Request Processing...</title>
   <style>
+    /* Modern font and layout */
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f0f0f0;
+      background-color: #ECF0F1;
+      color: #2C3E50;
     }
 
     .container {
       text-align: center;
-      padding: 30px;
-      background-color: #2C3E50;
-      border-radius: 15px;
+      padding: 40px 30px;
+      background-color: #34495E;
+      border-radius: 20px;
       color: white;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       max-width: 90%;
-      width: 600px; /* Adjusted width for larger screens */
+      width: 550px;
     }
 
     h1 {
-      font-size: 3rem; /* Increased font size for better readability */
+      font-size: 3.5rem;
       margin-bottom: 20px;
+      color: #1ABC9C;
     }
 
     .message {
-      font-size: 1.5rem; /* Increased font size */
+      font-size: 1.6rem;
       line-height: 1.8;
       margin: 20px 0;
       padding: 20px;
-      background-color: #34495E;
-      border-radius: 8px;
-      text-align: left;
+      background-color: #2C3E50;
+      border-radius: 10px;
       font-weight: normal;
     }
 
@@ -46,8 +48,8 @@
     }
 
     .footer {
-      font-size: 1.5rem; /* Larger font for the countdown */
-      margin-top: 20px;
+      font-size: 1.5rem;
+      margin-top: 30px;
       color: #BDC3C7;
     }
 
@@ -62,21 +64,25 @@
       }
     }
 
-    /* Responsive styling for smaller screens */
+    /* Responsive styling */
     @media (max-width: 600px) {
+      .container {
+        padding: 30px;
+        width: 90%;
+      }
+
       h1 {
         font-size: 2.5rem;
       }
 
       .message {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
 
       .footer {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
     }
-
   </style>
   <script>
     let countdown = 15; // Countdown starting at 15 seconds
@@ -114,10 +120,11 @@
 </head>
 <body>
   <div class="container">
-    <h1>Charging cable unlock requested!</h1>
+    <h1>Unlocking Charging Cable Request</h1>
     <div class="message">
-      <p>If the car is charged enough, the charging cable will be released!</p>
-      <p>Otherwise, if you're being impatient and scanned too early (or if my code broke), the car will get shitty at you.</p>
+      <p>Thank you for requesting access to the charging cable! We've received your request, and we're now checking the status of your vehicle.</p>
+      <p>If your car is sufficiently charged, the charging cable will be unlocked and ready for use.</p>
+      <p>If you scanned too early, or if the vehicle isn't quite ready, the car will not be happy with you—so please be patient!</p>
     </div>
     <div class="footer">
       <p id="countdown" class="blinking">Checking battery status in 15 seconds...</p>
