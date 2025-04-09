@@ -1,7 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Unlocking...</title>
+  <title>Unlocking Cable Request Processing...</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      text-align: center;
+      padding: 30px;
+      background-color: #2C3E50;
+      border-radius: 15px;
+      color: white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 80%;
+      width: 500px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin: 20px 0;
+      padding: 15px;
+      background-color: #34495E;
+      border-radius: 8px;
+      text-align: left;
+      font-weight: normal;
+    }
+
+    .message p {
+      margin: 10px 0;
+    }
+
+    .footer {
+      font-size: 1rem;
+      margin-top: 20px;
+      color: #BDC3C7;
+    }
+  </style>
   <script>
     // Trigger the webhook
     fetch("https://hooks.nabu.casa/gAAAAABn9kRdgWqj3Q-Pyxe8zsi2nWF7NmCtAJkhmwRddBZIIDgii5u5h2-BGW_gd73vyOQBS7OWA6zm7o0EUb7oLlBMFQ9wwVcnHI6jeS2KneCVhuSslfTnJBKQZLgocAtu6Qrf5p_CgOoon4hxL7-4n_iO1z-PhHDuiGWYprfUC19qdKEBFTI=")
@@ -14,13 +63,22 @@
         console.error("Fetch failed:", error);
       });
 
-    // Redirect after 3 seconds (2 seconds for webhook + 1 second delay for autoplay)
+    // Redirect after 10 seconds
     setTimeout(() => {
       window.location.href = "https://youtu.be/pQupqIYbrU4?autoplay=1";
-    }, 3000); // 3000ms = 3 seconds
+    }, 10000); // 10000ms = 10 seconds
   </script>
 </head>
 <body>
-  <p>Unlocking Tesla... Please wait.</p>
+  <div class="container">
+    <h1>Thanks for Scanning!</h1>
+    <div class="message">
+      <p>If you scanned after the battery charge is enough, the charging cable is all yours!</p>
+      <p>If you're impatient and scanned too early, the car will get angry at you.</p>
+    </div>
+    <div class="footer">
+      <p>Checking battery status now...</p>
+    </div>
+  </div>
 </body>
 </html>
