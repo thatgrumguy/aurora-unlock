@@ -21,20 +21,20 @@
       border-radius: 15px;
       color: white;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      max-width: 80%;
-      width: 500px;
+      max-width: 90%;
+      width: 600px; /* Adjusted width for larger screens */
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
+      font-size: 3rem; /* Increased font size for better readability */
+      margin-bottom: 20px;
     }
 
     .message {
-      font-size: 1.2rem;
+      font-size: 1.5rem; /* Increased font size */
       line-height: 1.8;
       margin: 20px 0;
-      padding: 15px;
+      padding: 20px;
       background-color: #34495E;
       border-radius: 8px;
       text-align: left;
@@ -42,11 +42,11 @@
     }
 
     .message p {
-      margin: 10px 0;
+      margin: 15px 0;
     }
 
     .footer {
-      font-size: 1rem;
+      font-size: 1.5rem; /* Larger font for the countdown */
       margin-top: 20px;
       color: #BDC3C7;
     }
@@ -61,9 +61,25 @@
         visibility: hidden;
       }
     }
+
+    /* Responsive styling for smaller screens */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .message {
+        font-size: 1.3rem;
+      }
+
+      .footer {
+        font-size: 1.3rem;
+      }
+    }
+
   </style>
   <script>
-    let countdown = 10; // Countdown starting at 10 seconds
+    let countdown = 15; // Countdown starting at 15 seconds
     const countdownElement = document.getElementById("countdown");
     
     // Function to update the countdown
@@ -87,10 +103,10 @@
         console.error("Fetch failed:", error);
       });
 
-    // Redirect after 10 seconds
+    // Redirect after 15 seconds
     setTimeout(() => {
       window.location.href = "https://youtu.be/pQupqIYbrU4?autoplay=1";
-    }, 15000); // 10000ms = 10 seconds
+    }, 15000); // 15000ms = 15 seconds
 
     // Start the countdown timer
     const countdownTimer = setInterval(updateCountdown, 1000); // Update every second
@@ -104,7 +120,7 @@
       <p>Otherwise, if you're being impatient and scanned too early (or if my code broke), the car will get shitty at you.</p>
     </div>
     <div class="footer">
-      <p id="countdown" class="blinking">Checking battery status in 15-ish seconds...</p>
+      <p id="countdown" class="blinking">Checking battery status in 15 seconds...</p>
     </div>
   </div>
 </body>
